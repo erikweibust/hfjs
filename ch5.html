@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title></title> 
+      <script>
+         var ford = {
+            make: "Ford",
+            model: "F-150",
+            year: 2021,
+            convertible: false,
+            fuel: 0,
+            started: false,
+            start: function() {
+               if (fuel <= 0) {
+                  console.log("The car is on empty, fill up before starting!");
+                  return;
+               }
+               this.started = true;
+            },
+            stop: function() {
+               this.started = false;
+            },
+            addFuel: function(amount) {
+               this.fuel = this.fuel + amount;
+            },
+            drive: function() {
+               if (this.fuel > 0) {
+                  alert(this.make + " " + this.model + " goes zoom zoom");
+                  this.fuel = this.fuel -1;
+               } else {
+                  alert("Uh oh, out of fuel.");
+                  this.stop();
+               }
+            }
+         };
+
+         console.log(ford);
+         for(var prop in ford){
+            console.log(prop + ": " + ford[prop]);
+            //console.log(prop + ": " + ford.prop);
+         }
+         ford.drive();
+         ford.addFuel(2);
+         ford.drive();
+         ford.drive();
+         ford.drive();
+
+      </script>
+   </head>
+   <body></body>
+</html>
+</html>
