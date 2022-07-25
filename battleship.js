@@ -262,4 +262,6 @@ Todo:
 4. 5 ships
 5. different sizes
 6. add proper names of ships
+7. add a previous guess tracker
+8. if they take a duplicate shot let them know what it was; should we count it against them? Yes! Dumbass should know where they guess!
 */
